@@ -1,6 +1,6 @@
 body{
-background:black;
-color:white;
+background:rgb(0, 0, 0);
+color:rgb(255, 0, 0);
 border-radius:10px;
 min-height:100vh;
 display:flex;
@@ -28,6 +28,7 @@ font-weight:bold;
 .subtexto{
 font-size:40px;
 margin-top:20px;
+color: #ffffff;
 }
 
 /* CARD LOGIN */
@@ -37,7 +38,7 @@ background:#d9d9d9;
 padding:35px;
 border-radius:15px;
 width:380px;
-color:black;
+color:rgb(0, 0, 0);
 }
 
 .form-control{
@@ -47,7 +48,7 @@ margin-bottom:15px;
 }
 
 .btn-entrar{
-background:red;
+background:rgb(248, 14, 14);
 border:none;
 border-radius:25px;
 width:100%;
@@ -90,7 +91,7 @@ text-decoration: none;
 }
 
 .links a:hover{
-    color: rgb(224, 24, 24); 
+    color: rgb(255, 0, 0); 
 }
 
 
@@ -105,7 +106,7 @@ margin:auto;
 border-radius:20px;
 padding:12px;
 margin-top:15px;
-background:#d9d9d9;
+background:#ffffff;
 border:none;
 }
 
@@ -125,7 +126,7 @@ border:none;
 margin-top:15px;
 display:flex;
 gap:20px;
-color:white;
+color:rgb(255, 255, 255);
 }
 
 .btn-criar{
@@ -135,11 +136,29 @@ border-radius:25px;
 padding:12px;
 width:200px;
 font-weight:bold;
-color:black;
+color:rgb(0, 0, 0);
 }
 
 .texto-cadastro{
+color:rgb(255, 253, 253);
 text-align:center;
 margin-top:10px;
-font-size:13px;
+font-size:14px;
+}
+
+.texto-cadastro a{
+font-size: 18px;
+color:rgb(255, 0, 0);
+text-decoration: none;
+}
+
+.texto-cadastro a:hover{
+color:rgb(255, 0, 0); 
+text-decoration:underline;
+}
+
+.texto-cadastro b{
+font-size: 14px;
+color:rgba(0, 0, 0, 0.664);
+text-decoration: none;
 }
