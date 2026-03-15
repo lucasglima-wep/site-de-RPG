@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruby RPG</title>
+
+<link rel="stylesheet" href="css/tela-inicial.css">
+<link rel="stylesheet" href="css/modo-escuro.css">
+<link rel="stylesheet" href="css/amigo.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+<!-- TOPO -->
+<header class="topo">
+
+<div class="logo-area">
+
+<img src="img/IMG_0032.JPG" class="logo-icon">
+
+<div class="logo-text">
+<span class="titulo">RUBY RPG</span>
+<span class="sub">POR PANTEON TABLE</span>
+</div>
+
+</div>
+
+<div class="menu-direita">
+
+<div class="status">
+<span class="bolinha"></span>
+Explorando
+</div>
+
+<div class="icone">
+<i class="bi bi-moon" id="tema" onclick="modoEscuro()"></i>
+</div>
+
+<div class="sessoes">
+🔥 15 sessões
+</div>
+
+<div class="usuario">
+
+<div class="nome">Guto</div>
+<a href="config-perfil.html">
+<img src="img/IMG_0032.JPG" class="foto-topo">
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+<button id="toggle">
+<i class="bi bi-list"></i>
+</button>
+</div>
+
+<!-- MENU DE CIMA -->
+<ul class="menu-top">
+
+<li >
+<a href="index.html" >
+<i class="bi bi-house"></i>
+<span>Início</span>
+</a>
+</li>
+
+<li>
+<a href="meu-perfil.html" >
+<i class="bi bi-person"></i>
+<span>Meu Perfil</span>
+</a>
+</li>
+
+<li class="active">
+<a href="amigos.html" >
+<i class="bi bi-people"></i>
+<span>Amigos</span>
+</a>
+</li>
+</ul>
+
+<!-- MENU DE BAIXO -->
+<ul class="menu-bottom">
+
+<li>
+<i class="bi bi-gear"></i>
+<span>Configurações</span>
+</li>
+
+</ul>
+
+</div>
+
+<!-- CONTEÚDO -->
+<div class="area-amigos">
+
+<h1>CÍRCULO DE HERÓIS</h1>
+<p class="sub-titulo">GERENCIE SEUS ALIADOS E DESCUBRA NOVAS AFINIDADES</p>
+
+<div class="busca">
+<input type="text" placeholder="Buscar por nome ou sistema...">
+<i class="bi bi-search"></i>
+</div>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+<div class="card-amigo">
+
+<div class="afinidade">95% AFINIDADE</div>
+
+<img src="img/avatar.png" class="avatar-amigo">
+
+<h2>ALTHEA SILVERLEAF</h2>
+
+<span class="status">● EM JOGO</span>
+
+<div class="estatisticas">
+
+<div>
+<strong>12</strong>
+<span>EM COMUM</span>
+</div>
+
+<div>
+<strong class="vermelho">3</strong>
+<span>REINOS</span>
+</div>
+
+</div>
+
+<div class="interesses">
+<span class="tag">D&D 5E</span>
+<span class="tag">TORMENTA20</span>
+<span class="tag azul">LEITURA DE TOLKIEN</span>
+</div>
+
+<button class="botao">SUSSURRAR</button>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="card-amigo">
+
+<div class="afinidade">88% AFINIDADE</div>
+
+<img src="img/is-this-a-good-pfp-v0-qm3p4sotkjgd1 (3).webp" class="avatar-amigo">
+
+<h2>THORIN IRONFIST</h2>
+
+<span class="status">● ONLINE</span>
+
+<div class="estatisticas">
+
+<div>
+<strong>9</strong>
+<span>EM COMUM</span>
+</div>
+
+<div>
+<strong class="vermelho">2</strong>
+<span>REINOS</span>
+</div>
+
+</div>
+
+<div class="interesses">
+<span class="tag">D&D 5E</span>
+<span class="tag">Pathfinder</span>
+<span class="tag azul">LOTR</span>
+</div>
+
+<button class="botao">SUSSURRAR</button>
+ <!-- card-amigo 3 -->
+</div> <!-- card-amigo -->
+
+<!-- CARD 3 -->
+<div class="card-amigo">
+
+<div class="afinidade">20% AFINIDADE</div>
+
+<img src="img/cdb7bd75c577b47b1c9224e4908e4372.jpg" class="avatar-amigo">
+
+<h2>THORIN IRONFIST</h2>
+
+<span class="status">● Offline</span>
+
+<div class="estatisticas">
+
+<div>
+<strong>3</strong>
+<span>EM COMUM</span>
+</div>
+
+<div>
+<strong class="vermelho">4</strong>
+<span>REINOS</span>
+</div>
+
+</div>
+
+<div class="interesses">
+<span class="tag">D&D 5E</span>
+<span class="tag">Pathfinder</span>
+<span class="tag azul">LOTR</span>
+</div>
+
+<button class="botao">SUSSURRAR</button>
+
+</div>
+
+</div> <!-- cards -->
+</div> <!-- area-amigos -->
+</div> <!-- container -->
+
+<script src="script/script.js"></script>
+
+</body>
+</html>
