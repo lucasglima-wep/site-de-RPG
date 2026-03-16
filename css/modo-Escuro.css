@@ -1,3 +1,27 @@
+
+
+:root{
+
+--bg:#0f0f10;
+
+--card:#1c1c1f;
+--cardSoft:#242428;
+
+--text:#e6e6e6;
+--sub:#a0a0a0;
+
+--accent:#8b1e1e;
+
+--shadow1:6px 6px 15px rgba(0,0,0,0.7);
+--shadow2:-4px -4px 12px rgba(255,255,255,0.04);
+
+}
+
+
+/* ================================= */
+/* TRANSIÇÕES GERAIS */
+/* ================================= */
+
 body,
 .sidebar,
 .topo,
@@ -7,32 +31,34 @@ body,
 input,
 textarea,
 a{
-
 transition:
 background 0.4s ease,
 color 0.4s ease,
 border 0.4s ease,
 box-shadow 0.4s ease;
-
-}
-
-body{
-background-color:#000000;
 }
 
 *{
-transition: all 0.4s ease;
+transition: all 0.3s ease;
 }
+
+
+/* ================================= */
+/* DARK MODE BASE */
+/* ================================= */
 
 .dark-mode{
-color:#ffffff;
+background:var(--bg);
+color:var(--text);
 }
 
 
+/* ================================= */
 /* SIDEBAR */
+/* ================================= */
 
 .dark-mode .sidebar{
-background:#000000;
+background:#000;
 box-shadow:2px 0 10px rgba(0,0,0,0.5);
 }
 
@@ -47,46 +73,73 @@ border-left:10px solid #ff3b3b;
 }
 
 
+/* ================================= */
 /* TOPO */
+/* ================================= */
 
 .dark-mode .topo{
-background:#1a1a1a;
+background:#000000;
 }
 
 
+/* ================================= */
 /* STATUS */
+/* ================================= */
 
 .dark-mode .status{
 background:#2a2a2a;
 color:#ddd;
 }
 
+.dark-mode .sessoes{
+font-size:12px;
+color:#f3f2f2;
+}
 
+
+/* ================================= */
 /* CONTEÚDO */
+/* ================================= */
 
 .dark-mode .conteudo{
-background:#1e1e1e;
-color:#f7f4f4;
-box-shadow:0 0px 35px rgb(161, 63, 63);
-border-radius: 20px;
+background:#000000;
+color:#000000;
+box-shadow:0 0 35px rgb(161,63,63);
+border-radius:20px;
 }
 
 
+/* ================================= */
 /* CARDS */
+/* ================================= */
 
-.dark-mode .card-texto{
-background:#242424;
-color:white;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
+.dark-mode .card-texto,
+.dark-mode .perfil-card{
+background:var(--card);
+color:#ffffff;
+box-shadow:0 5px 15px       rgb(150, 21, 21);
 }
 
-.dark-mode .card-perfil{
-background:#242424;
-color:#f1f1f1;
+.dark-mode .perfil-card h3{
+color:#ff4d4d;
 }
 
 
+/* ================================= */
+/* HOBBIES / SISTEMAS */
+/* ================================= */
+
+.dark-mode .hobby,
+.dark-mode .sistema{
+background:#e538357c;
+padding:4px 10px;
+border-radius:10px;
+}
+
+
+/* ================================= */
 /* INPUTS */
+/* ================================= */
 
 .dark-mode input,
 .dark-mode textarea{
@@ -96,7 +149,9 @@ border:1px solid #444;
 }
 
 
+/* ================================= */
 /* BOTÕES */
+/* ================================= */
 
 .dark-mode .cancelar{
 background:#3a3a3a;
@@ -108,55 +163,46 @@ background:#ff3b3b;
 }
 
 
+/* ================================= */
 /* TITULOS */
+/* ================================= */
 
 .dark-mode .conteudo h1{
-color:#ff4d4d;
+color:#df1010;
 }
 
 .dark-mode .conteudo h2{
-color:#ff6aa6;
+color:#ff6a6afa;
 }
+;
 
 
+/* ================================= */
 /* LINKS */
+/* ================================= */
 
 .dark-mode a{
-color:#ff4d4d;
+color:#c71f1f;
 }
-/* --------------------------------------------------- */
-.dark-mode .sessoes{
-    
-    font-size:12px;
-    color:#f3f2f2;
-    
-    }
 
-.dark-mode .perfil-card {
-    background:#242424;
-    color:#f1f1f1;
-    box-shadow:0 5px 15px rgba(0,0,0,0.5);
-    }
 
-.dark-mode .perfil-card h3{
-    color:#ff4d4d;
-    }
-
-    .dark-mode .hobby {
-    background:#e538357c;
-    padding:4px 10px;
-    border-radius:10px;
-    }
-
-    .dark-mode .sistema{
-    background:#e538357c; 
-    padding:4px 10px;
-    border-radius:10px;
-    }
+/* ================================= */
+/* ÁREA DE AMIGOS */
+/* ================================= */
 
 .dark-mode .area-amigos{
 background:#1e1e1e;
 color:#f7f4f4;
-box-shadow:0 0px 35px rgb(161, 63, 63);
-border-radius: 20px;;
-}   
+box-shadow:0 0 35px rgb(161,63,63);
+border-radius:20px;
+}
+
+.dark-mode .card-perfil
+{background:#000000;
+border:3px solid #f30808;}  
+
+.dark-mode .titulo-editar
+{background:#0a0a0a;
+
+border:3px solid #f30808;}
+
