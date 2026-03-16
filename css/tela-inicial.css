@@ -414,3 +414,48 @@ transform:scale(1.2);
     border-radius:50%;
     
     }
+
+/* login e cadastro */
+
+    .topo{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:5px 20px;
+}
+
+.auth-botoes{
+display:flex;
+gap:15px;
+justify-content:center;
+align-items:center;
+flex:1;
+}
+
+.btn-login,
+.btn-cadastro{
+padding:8px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-login{
+background:#333;
+color:white;
+}
+
+.btn-login:hover{
+background:#3be60791;
+color: #333;
+}
+
+.btn-cadastro{
+background:#e43f3f;
+color:white;
+}
+
+.btn-cadastro:hover{
+background:#9b5cff9d;
+}
