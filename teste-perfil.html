@@ -1,322 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pergaminho RPG</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<style>
-:root{
-
---bg:#f4f4f4;
---card:#f7f7f7;
---cardSoft:#efefef;
-
---text:#333;
---sub:#777;
-
---shadow1:8px 8px 18px rgba(0,0,0,0.08);
---shadow2:-6px -6px 18px rgba(255,255,255,0.9);
-
-}
-
-/* DARK MODE */
-
-.dark{
-
---bg:#1c1c1f;
---card:#242428;
---cardSoft:#2d2d32;
-
---text:#e6e6e6;
---sub:#a0a0a0;
-
---shadow1:6px 6px 15px rgba(0,0,0,0.6);
---shadow2:-4px -4px 12px rgba(255,255,255,0.05);
-
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:"Segoe UI",sans-serif;
-}
-
-body{
-background:var(--bg);
-color:var(--text);
-padding:40px;
-transition:0.4s;
-}
-
-/* BOTÃO */
-
-.toggle{
-position:fixed;
-top:20px;
-right:20px;
-border:none;
-background:var(--card);
-padding:10px 14px;
-border-radius:12px;
-cursor:pointer;
-font-size:18px;
-box-shadow:var(--shadow1),var(--shadow2);
-}
-
-/* LAYOUT */
-
-.dashboard{
-display:grid;
-grid-template-columns:280px 1fr;
-gap:30px;
-max-width:1100px;
-margin:auto;
-}
-
-.left,.right{
-display:flex;
-flex-direction:column;
-gap:25px;
-}
-
-/* CARD */
-
-.card{
-background:var(--card);
-border-radius:18px;
-padding:22px;
-box-shadow:var(--shadow1),var(--shadow2);
-transition:0.35s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* TITULOS */
-
-.card h4{
-font-size:12px;
-letter-spacing:1.5px;
-color:#e65b52;
-margin-bottom:14px;
-}
-
-/* BIO */
-
-.bio p{
-font-size:14px;
-color:var(--sub);
-line-height:1.6;
-}
-
-/* PILLS */
-
-.pill{
-background:var(--cardSoft);
-border-radius:10px;
-padding:10px 14px;
-margin-bottom:10px;
-font-size:13px;
-transition:.25s;
-cursor:pointer;
-}
-
-.pill:hover{
-transform:translateX(4px);
-}
-
-/* SISTEMAS */
-
-.systems{
-display:flex;
-gap:14px;
-}
-
-.system{
-flex:1;
-display:flex;
-align-items:center;
-gap:10px;
-padding:14px;
-border-radius:12px;
-background:var(--cardSoft);
-transition:.3s;
-cursor:pointer;
-}
-
-.system:hover{
-transform:scale(1.03);
-}
-
-.system strong{
-display:block;
-font-size:14px;
-}
-
-.system small{
-font-size:11px;
-color:var(--sub);
-}
-
-/* DOT */
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-}
-
-.red .dot{ background:#ff6b6b; }
-.blue .dot{ background:#4b82ff; }
-
-/* TOP */
-
-.top{
-display:flex;
-justify-content:space-between;
-margin-bottom:12px;
-}
-
-/* DOC */
-
-.doc{
-font-size:11px;
-background:var(--cardSoft);
-padding:6px 10px;
-border-radius:20px;
-}
-
-/* ITEM */
-
-.creation{
-display:flex;
-align-items:center;
-gap:14px;
-background:var(--cardSoft);
-padding:14px;
-border-radius:12px;
-transition:.3s;
-cursor:pointer;
-}
-
-.creation:hover{
-transform:scale(1.02);
-}
-
-/* BARRA */
-
-.bar{
-width:6px;
-height:42px;
-background:#7b1f1f;
-border-radius:5px;
-}
-
-/* TEXT */
-
-.text small{
-display:block;
-font-size:11px;
-color:var(--sub);
-}
-
-/* TAG */
-
-.tag{
-margin-left:auto;
-font-size:11px;
-background:var(--card);
-border:1px solid rgba(0,0,0,0.1);
-padding:5px 12px;
-border-radius:20px;
-}
-</style>
-
 <body>
+    <style>
 
-<button class="toggle" onclick="toggleTheme()">🌙</button>
+        .perfil-menu{
+position:relative;
+}
 
-<div class="dashboard">
+.dropdown{
+position:absolute;
+top:50px;
+right:0;
+background:#1e1e1e;
+border-radius:8px;
+padding:10px;
+display:none;
+flex-direction:column;
+min-width:150px;
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
 
-    <!-- COLUNA ESQUERDA -->
-    <div class="left">
+.dropdown a{
+color:white;
+text-decoration:none;
+padding:8px;
+border-radius:6px;
+}
 
-        <div class="card bio">
-            <h4>PERGAMINHO DE BIO</h4>
-            <p>"Mestre de RPG há 10 anos,<br>
-            apaixonado por fantasia sombria."</p>
-        </div>
+.dropdown a:hover{
+background:#333;
+}
+    </style>
+</body>
 
-        <div class="card hobbies">
-            <h4>HOBBIES & COSTUMES</h4>
+<div class="perfil-menu">
 
-            <div class="pill">🔒 PINTURA DE MINIATURAS</div>
-            <div class="pill">🔒 LEITURA DE TOLKIEN</div>
+<img src="img/IMG_0032.JPG" class="avatar" onclick="abrirMenu()">
 
-        </div>
-
-    </div>
-
-    <!-- COLUNA DIREITA -->
-    <div class="right">
-
-        <div class="card sistemas">
-
-            <h4>REINOS EXPLORADOS (SISTEMAS)</h4>
-
-            <div class="systems">
-
-                <div class="system red">
-                    <span class="dot"></span>
-                    <div>
-                        <strong>D&D 5E</strong>
-                        <small>FORJA INDEPENDENTE</small>
-                    </div>
-                </div>
-
-                <div class="system blue">
-                    <span class="dot"></span>
-                    <div>
-                        <strong>TORMENTA20</strong>
-                        <small>REINO OFICIAL</small>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="card criacoes">
-
-            <div class="top">
-                <h4>FORJA DE SISTEMAS (CRIAÇÕES)</h4>
-                <span class="doc">1 DOCUMENTOS</span>
-            </div>
-
-            <div class="creation">
-
-                <div class="bar"></div>
-
-                <div class="text">
-                    <strong>O REINO DE CINZAS</strong>
-                    <small>CÓDIGO: RUBY-2024</small>
-                </div>
-
-                <span class="tag">ARCANO</span>
-
-            </div>
-
-        </div>
-
-    </div>
+<div class="dropdown" id="menuPerfil">
+<a href="meu-perfil.html">👤 Meu Perfil</a>
+<a href="editar-perfil.html">✏️ Editar Perfil</a>
+<a href="config.html">⚙️ Configurações</a>
+<a href="logout.html">🚪 Sair</a>
+</div>
 
 </div>
 
-<script src="script.js">
- 
+
+<script>
+
+    function abrirMenu(){
+let menu = document.getElementById("menuPerfil");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
+}
+
 </script>
-</body>
+
 </html>

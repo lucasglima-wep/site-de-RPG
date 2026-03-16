@@ -459,3 +459,43 @@ color:white;
 .btn-cadastro:hover{
 background:#9b5cff9d;
 }
+
+/* menu dropdown */
+   .perfil-menu{
+position:relative;
+}
+
+.avatar{
+width:40px;
+height:40px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.dropdown{
+position:absolute;
+top:50px;
+right:0;
+background:#1e1e1e;
+border-radius:8px;
+padding:10px;
+display:none;
+flex-direction:column;
+min-width:160px;
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+
+/* deixa em primeiro plano */
+z-index:9999;
+}
+
+.dropdown a{
+color:white;
+text-decoration:none;
+padding:8px;
+border-radius:6px;
+display:block;
+}
+
+.dropdown a:hover{
+background:#333;
+}

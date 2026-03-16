@@ -111,3 +111,18 @@ conteudo.innerHTML = novoConteudo.innerHTML;
 });
 
 });
+
+
+/* ==============================
+TROCAR CONTEÚDO SEM RECARREGAR
+============================== */
+
+function abrirMenu(){
+let menu = document.getElementById("menuPerfil");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
+}
