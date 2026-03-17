@@ -6,9 +6,34 @@ body{
     flex-direction:column;
     font-family: Arial, Helvetica, sans-serif;  
     transition: background 0.9s ease, color 0.9s ease;
-
+    opacity:1;
+    transition: opacity 0.5s ease;
 }
     
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes cinemaIn{
+from{
+opacity:0;
+transform:scale(1.1);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+
+
     /* CONTAINER */
     
     .container{
@@ -18,16 +43,16 @@ body{
     
     /* SIDEBAR */
     
-    .sidebar{
-    width:230px;
-    height:100vh;
-    background:rgb(255, 255, 255);
-    box-shadow:2px 0 10px rgba(94, 39, 39, 0.1);
-    transition:0.3s;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    }
+   .sidebar{
+width:230px;
+min-height:100vh;
+background:rgb(255, 255, 255);
+box-shadow:2px 0 10px rgba(94, 39, 39, 0.1);
+transition:0.3s;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+}
     
     /* SIDEBAR FECHADA */
     
@@ -190,9 +215,8 @@ body{
     
     .logo-icon{
     
-    width:28px;
-    height:28px;
-    background:#e53935;
+    width:50px;
+    height:50px;
     border-radius:6px;
     
     }
@@ -301,46 +325,7 @@ body{
     
     }
     
-    /* LOGO */
     
-    .logo-area{
-    
-    display:flex;
-    align-items:center;
-    gap:10px;
-    
-    }
-    
-    .logo-icon{
-    
-    width:28px;
-    height:28px;
-    background:#9c2b29;
-    border-radius:6px;
-    
-    }
-    
-    .logo-text{
-    
-    display:flex;
-    flex-direction:column;
-    
-    }
-    
-    .titulo{
-    
-    color:#e53935;
-    font-weight:bold;
-    font-size:14px;
-    
-    }
-    
-    .sub{
-    
-    font-size:10px;
-    color:#777;
-    
-    }
     
     /* LADO DIREITO */
     
@@ -499,3 +484,189 @@ display:block;
 .dropdown a:hover{
 background:#333;
 }
+
+
+
+/* ---------------------------------- */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center,#1a0000,#000);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+overflow:hidden;
+color:white;
+}
+
+/* PARTÍCULAS SIMPLES (efeito leve) */
+#loader::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:0.2;
+animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg{
+0%{transform:translateY(0);}
+100%{transform:translateY(100px);}
+}
+
+/* CONTAINER */
+.loader-container{
+text-align:center;
+z-index:2;
+}
+
+/* LOGO */
+.logo-loader{
+font-size:45px;
+color:red;
+text-shadow:0 0 20px red;
+margin-bottom:20px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px red;}
+to{text-shadow:0 0 25px red;}
+}
+
+/* TEXTO */
+#loading-text{
+font-size:18px;
+margin-bottom:10px;
+animation:pulse 1.5s infinite;
+}
+
+/* DICA */
+#dica{
+font-size:14px;
+color:#aaa;
+margin-top:15px;
+max-width:300px;
+}
+
+/* BARRA */
+.barra{
+width:280px;
+height:14px;
+background:#111;
+border-radius:20px;
+overflow:hidden;
+margin:15px auto;
+box-shadow:0 0 10px rgba(255,0,0,0.2);
+}
+
+/* PROGRESSO */
+#progresso{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ff0000,#ff4d4d,#ff0000);
+background-size:200% 100%;
+animation:moveBar 2s linear infinite;
+border-radius:20px;
+}
+
+@keyframes moveBar{
+0%{background-position:0%;}
+100%{background-position:200%;}
+}
+
+/* PORCENTAGEM */
+#porcentagem{
+font-size:14px;
+color:#ccc;
+}
+
+/* ANIMAÇÃO */
+@keyframes pulse{
+0%{opacity:0.4;}
+50%{opacity:1;}
+100%{opacity:0.4;}
+}
+
+
+/* efeito cinema */
+
+#cinema-transition{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle,#000 20%,#000 80%);
+opacity:0;
+pointer-events:none;
+z-index:99999;
+transition:opacity 0.6s ease;
+}
+
+/* efeito ativo */
+#cinema-transition.active{
+opacity:1;
+}
+
+/* efeito de zoom dramático */
+body.cinema-zoom{
+transform:scale(1.05);
+transition:transform 0.6s ease;
+}
+
+/* ------------------------------------------------- */
+
+#doors{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:99999;
+pointer-events:none;
+display:flex;
+}
+
+/* PORTAS */
+.door{
+width:50%;
+height:100%;
+background:linear-gradient(90deg,#000,#1a0000);
+transition:transform 0.8s ease-in-out;
+}
+
+/* lado esquerdo */
+.door.left{
+transform:translateX(0);
+border-right:1px solid rgba(255,0,0,0.2);
+}
+
+/* lado direito */
+.door.right{
+transform:translateX(0);
+border-left:1px solid rgba(255,0,0,0.2);
+}
+
+/* ABRIR */
+#doors.open .left{
+transform:translateX(-100%);
+}
+
+#doors.open .right{
+transform:translateX(100%);
+}
+
+/* FECHAR (entrada da página) */
+#doors.close .left{
+transform:translateX(0);
+}
+
+#doors.close .right{
+transform:translateX(0);
+}
+

@@ -5,8 +5,12 @@ border-radius:10px;
 min-height:100vh;
 display:flex;
 flex-direction:column;
+padding:10px;
 }
 
+*{
+transition: all 0.3s ease;
+}
 
 /* LOGO */
 
@@ -15,6 +19,7 @@ position:absolute;
 top:20px;
 left:20px;
 width:200px;
+max-width:40%;
 }
 
 /* TITULO */
@@ -23,12 +28,14 @@ width:200px;
 color:red;
 font-size:80px;
 font-weight:bold;
+text-align:center;
 }
 
 .subtexto{
 font-size:40px;
 margin-top:20px;
 color: #ffffff;
+text-align:center;
 }
 
 /* CARD LOGIN */
@@ -38,6 +45,8 @@ background:#d9d9d9;
 padding:35px;
 border-radius:15px;
 width:380px;
+max-width:100%;
+margin:auto;
 color:rgb(0, 0, 0);
 }
 
@@ -45,6 +54,7 @@ color:rgb(0, 0, 0);
 border-radius:20px;
 padding:12px;
 margin-bottom:15px;
+width:100%;
 }
 
 .btn-entrar{
@@ -63,6 +73,7 @@ border:none;
 border-radius:25px;
 padding:12px;
 width:70%;
+max-width:250px;
 color:white;
 }
 
@@ -73,6 +84,7 @@ background:#d9d9d9;
 color:rgb(0, 0, 0);
 padding:15px;
 margin-top:auto;
+text-align:center;
 }
 
 .idiomas{
@@ -82,24 +94,25 @@ font-size:14px;
 .links{
 font-size:14px;
 margin-top:10px;
-color:rgb(0, 0, 0);text-decoration:none;
+color:rgb(0, 0, 0);
+text-decoration:none;
 }
 
-.links a
-{color: #000000;
+.links a{
+color: #000000;
 text-decoration: none;
 }
 
 .links a:hover{
-    color: rgb(255, 0, 0); 
+color: rgb(255, 0, 0); 
 }
 
-
-/*  CADASTRO */
+/* CADASTRO */
 
 .cadastro-form{
 max-width:420px;
 margin:auto;
+padding:10px;
 }
 
 .cadastro-form .form-control{
@@ -114,12 +127,19 @@ border:none;
 display:flex;
 gap:10px;
 margin-top:15px;
+flex-wrap:wrap;
+}
+
+.data-nascimento select{
+flex:1;
+min-width:80px;
 }
 
 .form-select{
 background:#444;
 color:white;
 border:none;
+width:100%;
 }
 
 .genero{
@@ -127,6 +147,7 @@ margin-top:15px;
 display:flex;
 gap:20px;
 color:rgb(255, 255, 255);
+flex-wrap:wrap;
 }
 
 .btn-criar{
@@ -160,5 +181,130 @@ text-decoration:underline;
 .texto-cadastro b{
 font-size: 14px;
 color:rgba(0, 0, 0, 0.664);
-text-decoration: none;
 }
+
+/* =========================
+RESPONSIVIDADE
+========================= */
+
+/* Tablet */
+@media (max-width: 768px){
+
+.titulo{
+font-size:50px;
+}
+
+.subtexto{
+font-size:25px;
+}
+
+.logo{
+width:140px;
+}
+
+.login-card{
+padding:25px;
+}
+
+}
+
+/* Celular */
+@media (max-width: 480px){
+
+.titulo{
+font-size:35px;
+}
+
+.subtexto{
+font-size:18px;
+}
+
+.logo{
+position:static;
+display:block;
+margin:0 auto 20px;
+width:120px;
+}
+
+.login-card{
+padding:20px;
+}
+
+.btn-criar{
+width:100%;
+}
+
+.data-nascimento{
+flex-direction:column;
+}
+
+}
+
+/* animações */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.login-card,
+.titulo,
+.subtexto{
+animation: fadeUp 0.8s ease;
+}
+
+
+.btn-entrar:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(255,0,0,0.7);
+}
+
+.btn-criar:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(25,214,122,0.7);
+}
+
+
+.form-control:focus{
+outline:none;
+box-shadow:0 0 10px rgba(255,0,0,0.5);
+transform:scale(1.02);
+}
+
+.login-card{
+animation: fadeUp 0.8s ease;
+}
+
+.login-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.logo{
+animation: fadeUp 1s ease;
+}
+
+.logo:hover{
+transform:rotate(-3deg) scale(1.05);
+}
+
+.titulo{
+text-shadow:0 0 10px rgba(255,0,0,0.7);
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.btn-entrar{
+animation:pulse 2s infinite;
+}
+

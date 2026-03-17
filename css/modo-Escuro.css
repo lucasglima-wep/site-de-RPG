@@ -100,7 +100,7 @@ color:#f3f2f2;
 /* CONTEÚDO */
 
 .dark-mode .conteudo{
-background:#000000;
+background:#1e1e1e;
 color:#000000;
 box-shadow:0 0 35px rgb(161,63,63);
 border-radius:20px;
@@ -170,13 +170,17 @@ color:#df1010;
 }
 
 .dark-mode .conteudo h2{
-color:#ff6a6afa;
+color:#f8f4f4fa;
 }
-;
+
 
 
 
 /* LINKS */
+
+.dark-mode  .dropdown a
+{color:#ffffff;
+} 
 
 
 .dark-mode a{
@@ -204,3 +208,6 @@ border:3px solid #f30808;}
 
 border:3px solid #f30808;}
 
+.dark-mode.sub-titulo{
+color:#f7f4f4;
+}

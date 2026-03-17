@@ -39,14 +39,35 @@ text-shadow:0 0 8px #ff0000;
 
 </style>
 
-<body>
+<div id="doors">
+  <div class="door left"></div>
+  <div class="door right"></div>
+</div>
+
+<div id="loader">
+  <div class="loader-container">
+
+    <h1 class="logo-loader">Ruby RPG</h1>
+
+    <p id="loading-text">Iniciando mundo...</p>
+
+    <div class="barra">
+      <div id="progresso"></div>
+    </div>
+
+    <span id="porcentagem">0%</span>
+
+    <p id="dica"></p>
+
+  </div>
+</div>
 
 <!-- TOPO -->
 <header class="topo">
 
 <div class="logo-area">
 
-<img src="../img/IMG_0032.JPG" class="logo-icon">
+<img src="../img/logo da tela de inicio sem fundo.png" class="logo-icon">
 
 <div class="logo-text">
 <span class="titulo">RUBY RPG</span>
@@ -177,7 +198,6 @@ Explorando
 
     <div class="pill conteudo-text">🔒 PINTURA DE MINIATURAS</div>
     <div class="pill conteudo-text">🔒 LEITURA DE TOLKIEN</div>
-     <input type="text" class="pill " placeholder="Adicionar hobby...">
     </div>
 
     </div>
@@ -238,6 +258,8 @@ Explorando
 </div>
 
 </div>
+
+<div id="cinema-transition"></div>
 
 <script src="../script/script.js"></script>
 
