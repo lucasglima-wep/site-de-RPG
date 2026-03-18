@@ -173,6 +173,9 @@ color:#df1010;
 color:#f8f4f4fa;
 }
 
+.dark-mode .sub-titulo{
+    color: #ffffff;
+}
 
 
 
@@ -184,11 +187,16 @@ color:#f8f4f4fa;
 
 
 .dark-mode a{
-color:#c71f1f;
+color:#e21515;
 }
 
+.dark-mode .btn-login {
+    color: #ffffff;
+}
 
-
+ .dark-mode .btn-cadastro{
+    color: #ffffff;
+ }
 /* ÁREA DE AMIGOS */
 
 

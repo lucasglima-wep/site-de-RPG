@@ -42,20 +42,20 @@ sua mesa!
 <div class="row">
 
 <div class="col-md-6">
-<input class="form-control" placeholder="Nome">
+<input type="text" id="nome" class="form-control" placeholder="Nome" required>
 </div>
 
 <div class="col-md-6">
-<input class="form-control" placeholder="Sobrenome">
+<input type="text" id="sobrenome" class="form-control" placeholder="Sobrenome" required>
 </div>
 
 </div>
 
-<input class="form-control" placeholder="E-mail ou número de telefone">
+<input type="email" id="email" class="form-control" placeholder="E-mail ou número de telefone" required>
 
-<input type="password" class="form-control" placeholder="Senha">
+<input type="password" id="senha" class="form-control" placeholder="Senha" required>
 
-<input type="password" class="form-control" placeholder="Confirmar Senha">
+<input type="password" id="confirmar-senha" class="form-control" placeholder="Confirmar Senha" required>
 
 <div class="data-nascimento">
 
@@ -131,7 +131,7 @@ Português (Brasil) English (US) Español Français (France) Italiano Deutsch ا
 
 </footer>
 
-<script>
+<script src="../script/script.js">
 
 let dia = document.getElementById("dia");
 let mes = document.getElementById("mes");

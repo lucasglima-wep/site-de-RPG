@@ -10,6 +10,15 @@ body{
     transition: opacity 0.5s ease;
 }
     
+
+*{
+    box-sizing:border-box;
+}
+
+html, body{
+    overflow-x:hidden;
+}
+
 @keyframes fadeIn{
 from{
 opacity:0;
@@ -82,6 +91,38 @@ flex-direction:column;
     }
     
     /* MENU */
+
+    .menu-toggle{
+        display:none;
+        background:none;
+        border:none;
+        font-size:22px;
+        cursor:pointer;
+        color:#e53935;
+    }
+    
+    .menu-toggle{
+  font-size:22px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+  margin-right:10px;
+}
+    /* MOBILE */
+    @media (max-width:768px){
+    
+        .menu-toggle{
+            display:block;
+        }
+    
+        .topo{
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+    
+    }
     
     .sidebar ul{
     list-style:none;
@@ -194,15 +235,20 @@ flex-direction:column;
     
     .topo{
     
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    
-    background:#e9e9e9;
-    padding:10px 20px;
-    
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:10px 15px;
     }
     
+
+   /* AGRUPA BOTÃO + LOGO */
+    .topo-esquerda{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
     /* LOGO */
     
     .logo-area{
@@ -337,30 +383,7 @@ flex-direction:column;
     
     }
     
-    /* STATUS */
     
-    .status{
-    
-    display:flex;
-    align-items:center;
-    gap:6px;
-    
-    background:#f3f3f3;
-    padding:6px 12px;
-    border-radius:20px;
-    
-    font-size:12px;
-    
-    }
-    
-    .bolinha{
-    
-    width:8px;
-    height:8px;
-    background:#3ddc84;
-    border-radius:50%;
-    
-    }
     
     /* ICONES */
     
@@ -481,13 +504,43 @@ border-radius:6px;
 display:block;
 }
 
+.dropdown.ativo{
+  display:flex;
+}
+
 .dropdown a:hover{
-background:#333;
+background:#ff0000;
 }
 
 
+/* LOGIN */
+.auth-area .login{
+    background:#333;
+    color:#fff;
+}
 
-/* ---------------------------------- */
+.auth-area .login:hover{
+    background:#555;
+}
+
+/* CADASTRO */
+.auth-area .cadastro{
+    background:#e53935;
+    color:#fff;
+}
+
+.auth-area .cadastro:hover{
+    background:#c62828;
+}
+
+/* LINHA */
+.dropdown hr{
+    border:0;
+    height:1px;
+    background:#444;
+    margin:10px 0;
+}
+
 
 #loader{
 position:fixed;
@@ -502,7 +555,7 @@ overflow:hidden;
 color:white;
 }
 
-/* PARTÍCULAS SIMPLES (efeito leve) */
+/* PARTÍCULAS SIMPLES  */
 #loader::before{
 content:"";
 position:absolute;
@@ -520,58 +573,66 @@ animation: moveBg 20s linear infinite;
 
 /* CONTAINER */
 .loader-container{
-text-align:center;
-z-index:2;
+  text-align:center;
+  z-index:2;
+  padding:20px;
 }
 
 /* LOGO */
 .logo-loader{
-font-size:45px;
-color:red;
-text-shadow:0 0 20px red;
-margin-bottom:20px;
-animation: glow 2s infinite alternate;
+  font-size:60px; /* ⬅️ aumentei */
+  color:red;
+  text-shadow:0 0 20px red;
+  margin-bottom:25px;
+  animation: glow 2s infinite alternate;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 10px red;}
-to{text-shadow:0 0 25px red;}
+  from{ text-shadow:0 0 10px red; }
+  to{ text-shadow:0 0 30px red; }
 }
 
 /* TEXTO */
 #loading-text{
-font-size:18px;
-margin-bottom:10px;
-animation:pulse 1.5s infinite;
+  font-size:22px; 
+  margin-bottom:12px;
+  animation:pulse 1.5s infinite;
 }
 
 /* DICA */
 #dica{
-font-size:14px;
-color:#aaa;
-margin-top:15px;
-max-width:300px;
+  font-size:16px; 
+  color:#aaa;
+  margin-top:15px;
+  max-width:400px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* BARRA */
 .barra{
-width:280px;
-height:14px;
-background:#111;
-border-radius:20px;
-overflow:hidden;
-margin:15px auto;
-box-shadow:0 0 10px rgba(255,0,0,0.2);
+  width:350px; 
+  height:16px;
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px auto;
+  box-shadow:0 0 15px rgba(255,0,0,0.3);
 }
 
 /* PROGRESSO */
 #progresso{
-height:100%;
-width:0%;
-background:linear-gradient(90deg,#ff0000,#ff4d4d,#ff0000);
-background-size:200% 100%;
-animation:moveBar 2s linear infinite;
-border-radius:20px;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ff0000,#ff4d4d,#ff0000);
+  background-size:200% 100%;
+  animation:moveBar 2s linear infinite;
+  border-radius:20px;
+} 
+#progresso {
+  width: 0%;
+  height: 100%;
+  transition: width 0.2s linear;
 }
 
 @keyframes moveBar{
@@ -619,7 +680,7 @@ transform:scale(1.05);
 transition:transform 0.6s ease;
 }
 
-/* ------------------------------------------------- */
+
 
 #doors{
 position:fixed;
@@ -670,3 +731,193 @@ transform:translateX(0);
 transform:translateX(0);
 }
 
+
+.conteudo{
+    padding:15px;
+}
+
+.card-texto{
+    width:100%;
+    padding:18px;
+    border-radius:10px;
+}
+
+
+    /* LOADER */
+    .barra{
+        width:90%;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    .btn-login,
+    .btn-cadastro{
+        width:100%;
+        text-align:center;
+        padding:12px;
+        font-size:14px;
+    }
+
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    .conteudo{
+        padding:20px;
+    }
+
+    .card-texto{
+        max-width:100%;
+    }
+
+    .topo{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+}
+
+
+/* CELULAR */
+@media (max-width:768px){
+
+.dropdown { 
+    top: 15%;
+    right: 0;
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 160px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:260px;
+        height:100%;
+        transform:translateX(-100%);
+        transition:transform 0.4s ease;
+        z-index:9999;
+    }
+
+    .sidebar.open{
+        transform:translateX(0);
+    }
+
+
+    .overlay{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5);
+        opacity:0;
+        pointer-events:none;
+        transition:0.3s;
+        z-index:9998;
+    }
+
+    .overlay.show{
+        opacity:1;
+        pointer-events:auto;
+    }
+
+    
+
+    .logo-loader{
+    font-size:40px;
+  }
+
+  #loading-text{
+    font-size:18px;
+  }
+
+  #dica{
+    font-size:14px;
+    max-width:90%;
+  }
+
+  .barra{
+    width:90%; 
+    height:14px;
+  }
+
+}
+
+.conteudo{
+    padding:15px;
+}
+
+.card-texto{
+    width:100%;
+    padding:18px;
+    border-radius:10px;
+}
+
+
+    /* LOADER */
+    .barra{
+        width:90%;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    .btn-login,
+    .btn-cadastro{
+        width:100%;
+        text-align:center;
+        padding:12px;
+        font-size:14px;
+    }
+
+
+
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px){
+
+    .logo-loader{
+        font-size:30px;
+    }
+
+    #loading-text{
+        font-size:14px;
+    }
+
+    #dica{
+        font-size:12px;
+    }
+
+    .card-texto{
+        padding:15px;
+    }
+
+}
